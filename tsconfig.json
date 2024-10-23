@@ -1,14 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "NodeNext",
     "typeRoots": ["./node_modules/@types", "./types"],
     "outDir": "./dist",
+    "verbatimModuleSyntax": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "moduleResolution": "NodeNext",
     "skipLibCheck": true,
+    "types": [
+      "node"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   },
   "include": [
     "src/**/*.ts",

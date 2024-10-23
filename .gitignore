@@ -1,16 +1,37 @@
-node_modules
-.dist
+# Dependencies
+node_modules/
+
+# Build output
+.dist/
 
 # Logs
-logs
+logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Misc
-.DS_Store
-.fleet
-.idea
-
-# Local env files
+# Environment variables
 .env
 .env.*
 !.env.example
+.env.production
+
+# IDE and editor files
+.vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
+.idea/
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf
+.fleet
+
+# Yarn
+.yarn/
+!.yarn/releases
+
+# Miscellaneous
+.DS_Store
