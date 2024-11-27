@@ -131,16 +131,6 @@ export interface FeedCounters {
   unreads: { [key: string]: number }
 }
 
-export interface VersionInfo {
-  version: string
-  commit: string
-  build_date: string
-  go_version: string
-  compiler: string
-  arch: string
-  os: string
-}
-
 export interface EntryUpdatePayload {
   title?: string
   content?: string

@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import { MinifluxClient } from '../client.ts'
-import type { Entry, Feed, Category, User, FeedIcon, VersionInfo, FeedCounters, EntryResultSet } from '../types.ts'
+import { MinifluxClient } from '../src/client.ts'
+import type { Entry, Feed, Category, User, FeedIcon, FeedCounters, EntryResultSet } from '../src/types.ts'
 
 describe('MinifluxClient', () => {
   let client: MinifluxClient

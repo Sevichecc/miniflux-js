@@ -9,7 +9,6 @@ import type {
   Enclosure,
   User,
   FeedCounters,
-  VersionInfo,
   EntryUpdatePayload,
 } from './types.ts'
 

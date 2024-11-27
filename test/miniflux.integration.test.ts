@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { MinifluxClient } from '../client.ts'
-import type { Entry, Feed, Category, User, FeedIcon, VersionInfo, FeedCounters, EntryResultSet } from '../types.ts'
+import { MinifluxClient } from '../src/client.ts'
+import type { Feed, Category, User, FeedIcon, EntryResultSet } from '../src/types.ts'
 import dotenv from 'dotenv'
 
 dotenv.config()
