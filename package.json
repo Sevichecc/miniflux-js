@@ -7,7 +7,12 @@
   "type": "module",
   "scripts": {
     "test": "vitest",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "build": "tsx src/index.ts",
+    "typedoc": "tsx docs/index.ts",
+    "format": "prettier --write src/**/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
   },
   "repository": {
     "type": "git",
@@ -26,13 +31,10 @@
     "url": "https://github.com/Sevichecc/miniflux-js/issues"
   },
   "homepage": "https://github.com/Sevichecc/miniflux-js#readme",
-  "dependencies": {
-    "@hono/node-server": "^1.13.2",
-    "hono": "^4.6.6"
-  },
   "devDependencies": {
     "@types/node": "^20.11.17",
     "dotenv": "^16.4.5",
+    "prettier": "^3.4.1",
     "tsx": "^4.7.1",
     "typescript": "^5.6.3",
     "vitest": "^2.1.3"

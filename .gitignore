@@ -35,3 +35,4 @@ lerna-debug.log*
 
 # Miscellaneous
 .DS_Store
+.env

@@ -1,1 +1,2 @@
-export * from './miniflux/index.ts';
+export { MinifluxClient } from './client.ts'
+export * from "./types.ts"
