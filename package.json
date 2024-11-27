@@ -9,7 +9,7 @@
     "test": "vitest",
     "dev": "tsx watch src/index.ts",
     "build": "tsx src/index.ts",
-    "build:docs": "tsx docs/index.ts",
+    "build:docs": "typedoc --out docs src/index.ts",
     "format": "prettier --write src/**/*.ts",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix"
