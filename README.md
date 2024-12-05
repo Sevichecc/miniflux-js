@@ -16,22 +16,22 @@ Unofficial JavaScript SDK for [Miniflux](https://miniflux.app) RSS reader.
 
 ```bash
 # Using npm
-npm install miniflux
+npm install miniflux-js
 
 # Using yarn
-yarn add miniflux
+yarn add miniflux-js
 
 # Using pnpm
-pnpm add miniflux
+pnpm add miniflux-js
 
 # Using bun
-bun add miniflux
+bun add miniflux-js
 ```
 
 ## Quick Start
 
 ```typescript
-import { MinifluxClient } from 'miniflux'
+import { MinifluxClient } from 'miniflux-js'
 
 // Initialize client with API key
 const client = new MinifluxClient({
