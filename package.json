@@ -1,5 +1,5 @@
 {
-  "name": "miniflux-js",
+  "name": "miniflux",
   "version": "0.0.1",
   "description": "A javascript SDK for Miniflux.",
   "main": "dist/index.js",
@@ -12,7 +12,9 @@
     "build:docs": "typedoc --out docs src/index.ts",
     "format": "prettier --write src/**/*.ts",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix"
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "prepublishOnly": "pnpm run build",
+    "prepack": "pnpm run build"
   },
   "repository": {
     "type": "git",

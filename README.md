@@ -2,8 +2,11 @@
 
 Unofficial JavaScript SDK for [Miniflux](https://miniflux.app) RSS reader.
 
-[![npm version](https://badge.fury.io/js/miniflux-js.svg)](https://badge.fury.io/js/miniflux-js)
+[![npm version](https://badge.fury.io/js/miniflux.svg)](https://badge.fury.io/js/miniflux)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+![CI](https://github.com/Sevichecc/miniflux.js/workflows/CI/badge.svg)
 
 ## Features
 
@@ -17,19 +20,22 @@ Unofficial JavaScript SDK for [Miniflux](https://miniflux.app) RSS reader.
 
 ```bash
 # Using npm
-npm install miniflux-js
+npm install miniflux
 
 # Using yarn
-yarn add miniflux-js
+yarn add miniflux
 
 # Using pnpm
-pnpm add miniflux-js
+pnpm add miniflux
+
+# Using bun
+bun add miniflux
 ```
 
 ## Quick Start
 
 ```typescript
-import { MinifluxClient } from 'miniflux-js'
+import { MinifluxClient } from 'miniflux'
 
 // Initialize client with API key
 const client = new MinifluxClient({
@@ -102,6 +108,9 @@ pnpm format
 
 # Lint code
 pnpm lint
+
+# Linting fix
+pnpm lint:fix
 ```
 
 ## Contributing
