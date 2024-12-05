@@ -348,6 +348,25 @@ describe('MinifluxClient', () => {
         const counters = await client.getCounters()
         expect(counters).toEqual(mockCounters)
       })
+
+      it('should search entries', async () => {
+        vi.spyOn(client, 'searchEntries').mockResolvedValue({ total: 0, entries: [] })
+        const entries = await client.searchEntries('test')
+        expect(entries).toEqual({ total: 0, entries: [] })
+      })
+
+      it('should search entries with limit', async () => {
+        vi.spyOn(client, 'searchEntries').mockResolvedValue({ total: 0, entries: [] })
+        const entries = await client.searchEntries('test', 10)
+        expect(entries).toEqual({ total: 0, entries: [] })
+      })
+
+      it('should get Miniflux entry URL', async () => {
+        vi.spyOn(client, 'getMinifluxEntryUrl').mockResolvedValue('https://example.com/entry')
+        const url = await client.getMinifluxEntryUrl(1)
+        expect(url).toBe('https://example.com/entry')
+      })
     })
   })
+
 })

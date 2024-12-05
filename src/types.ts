@@ -135,3 +135,7 @@ export interface EntryUpdatePayload {
   title?: string
   content?: string
 }
+
+export interface EntryStatus {
+  status: 'read' | 'unread'
+}

@@ -10,6 +10,7 @@ import type {
   User,
   FeedCounters,
   EntryUpdatePayload,
+  EntryStatus,
 } from './types.ts'
 
 /**
@@ -502,5 +503,33 @@ export class MinifluxClient {
    */
   async getCounters(): Promise<FeedCounters> {
     return this.request('/v1/feeds/counters')
+  }
+
+  // Utility Methods
+
+  /**
+   * Search for entries.
+   * @param query - Search query
+   * @param limit - Optional limit for the number of results
+   * @returns Promise resolving to the search results
+   */
+  async searchEntries(query: string, limit?: number): Promise<EntryResultSet> {
+    const params = new URLSearchParams()
+    params.append('search', query)
+    if (limit) {
+      params.append('limit', limit.toString())
+    }
+    return this.request(`/v1/entries?search=${params.toString()}}`)
+  }
+
+  /**
+   * Retrieves the Miniflux URL for an entry.
+   * @param id - ID of the entry
+   * @returns Promise resolving to the Miniflux URL
+   */
+  async getMinifluxEntryUrl(id: number): Promise<string> {
+    const response = await this.request<EntryStatus>(`/v1/entries/${id}`)
+    const { status } = response
+    return `${this.baseUrl}/${status === 'read' ? 'history' : status}/entry/${id}`
   }
 }

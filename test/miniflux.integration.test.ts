@@ -254,6 +254,32 @@ describe('MinifluxClient Integration Tests', () => {
       }
     })
 
+
+    it('should search entries', async () => {
+      const entries = await client.searchEntries('test')
+      expect(entries).toHaveProperty('total')
+      expect(entries).toHaveProperty('entries')
+      expect(Array.isArray(entries.entries)).toBe(true)
+    })
+
+    it('should search entries with limit', async () => {
+      const entries = await client.searchEntries('test', 10)
+      expect(entries).toHaveProperty('total')
+      expect(entries).toHaveProperty('entries')
+      expect(Array.isArray(entries.entries)).toBe(true)
+    })
+
+    it('should handle Miniflux entry URL responses', async () => {
+      const entries = await client.getEntries()
+      if (entries.entries.length > 0) {
+        const validResponse = await client.getMinifluxEntryUrl(entries.entries[0].id)
+        expect(typeof validResponse).toBe('string')
+        expect(validResponse).toMatch(/^https?:\/\//)
+      }
+
+      await expect(client.getMinifluxEntryUrl(-1)).rejects.toThrow('resource not found')
+    })
+
     it('should handle save entry when third-party integration is disabled', async () => {
       const entries = await client.getEntries()
       if (entries.entries.length > 0) {
@@ -275,7 +301,6 @@ describe('MinifluxClient Integration Tests', () => {
         expect(updatedEntry.title).toBe('Updated Title')
       }
     })
-
   })
 
   describe('Category API', () => {
