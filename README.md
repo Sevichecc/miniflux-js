@@ -1,4 +1,4 @@
-# Miniflux.js (Work in Progress)
+# Miniflux.js
 
 Unofficial JavaScript SDK for [Miniflux](https://miniflux.app) RSS reader.
 
