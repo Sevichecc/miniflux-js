@@ -506,7 +506,6 @@ export class MinifluxClient {
   }
 
   // Utility Methods
-
   /**
    * Search for entries.
    * @param query - Search query
