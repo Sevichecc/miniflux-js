@@ -16,7 +16,8 @@
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
     "allowImportingTsExtensions": true,
-    "noEmit": true
+    "noEmit": true,
+    "isolatedModules": true,
   },
   "include": [
     "src/**/*.ts",
