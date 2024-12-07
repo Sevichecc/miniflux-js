@@ -9,7 +9,7 @@
     "test": "vitest",
     "dev": "tsup src/index.ts --format esm --dts --watch",
     "build": "tsup src/index.ts --format esm --dts --clean",
-    "build:docs": "typedoc --out docs src/index.ts --plugin typedoc-material-theme --themeColor '#cb9820",
+    "build:docs": "typedoc --out docs src/index.ts --plugin typedoc-material-theme --themeColor '#cb9820'",
     "format": "prettier --write src/**/*.ts",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
