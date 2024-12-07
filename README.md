@@ -2,7 +2,10 @@
 
 Unofficial JavaScript SDK for [Miniflux](https://miniflux.app) RSS reader.
 
-[![npm version](https://badge.fury.io/js/miniflux-js.svg)](https://badge.fury.io/js/miniflux-js) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![CI](https://github.com/Sevichecc/miniflux-js/workflows/CI/badge.svg)
+[![npm version](https://flat.badgen.net/npm/v/miniflux-js?color=cyan)](https://npmjs.com/package/miniflux-js)
+[![npm downloads](https://flat.badgen.net/npm/dm/miniflux-js?color=cyan)](https://npm.chart.dev/miniflux-js)
+[![bundle size](https://flat.badgen.net/bundlephobia/minzip/miniflux-js?color=cyan)](https://bundlephobia.com/package/miniflux-js)
+[![license](https://flat.badgen.net/github/license/Sevichecc/miniflux-js?color=cyan)](https://github.com/Sevichecc/miniflux-js/blob/main/LICENSE)
 
 ## Features
 

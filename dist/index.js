@@ -1,5 +1,4 @@
-// src/client.ts
-var MinifluxClient = class {
+class MinifluxClient {
   baseUrl;
   apiKey;
   username;
@@ -454,7 +453,6 @@ var MinifluxClient = class {
     const { status } = response;
     return `${this.baseUrl}/${status === "read" ? "history" : status}/entry/${id}`;
   }
-};
-export {
-  MinifluxClient
-};
+}
+
+export { MinifluxClient };
