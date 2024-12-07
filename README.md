@@ -89,7 +89,7 @@ The SDK provides methods for all Miniflux API endpoints. Here are some commonly 
 - `searchEntries(query, limit?)`: Search for entries with optional result limit
 - `getMinifluxEntryUrl(entryId)`: Get Miniflux web UI URL for an entry
 
-For complete API documentation, please visit our [API Reference](https://github.com/Sevichecc/miniflux-js/docs).
+For complete API documentation, please visit our [API Reference](https://sevichecc.github.io/miniflux-js/).
 
 ## Development
 
