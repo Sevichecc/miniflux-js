@@ -17,6 +17,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "pkgroll",
+    "build:docs": "typedoc --out docs src/index.ts --plugin typedoc-material-theme --themeColor '#cb9820'",
     "dev": "pkgroll --watch",
     "test": "vitest",
     "lint": "eslint src/**/*.ts",
